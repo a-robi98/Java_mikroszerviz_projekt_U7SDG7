@@ -9,11 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+
 public interface CarteItemRepository extends JpaRepository<CarteItem,Long> {
 
-    List<CarteItem> listAllCarteItems();
-    CarteItem getCarteItemById(Long id);
-    void insertCarteItem(CarteItem carteItem);
 
 }
