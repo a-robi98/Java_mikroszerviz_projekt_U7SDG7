@@ -20,7 +20,7 @@ public class CarteItemServiceImpl implements CarteItemService {
 
     @Override
     public void addCarteItem(CarteItem carteItem) {
-
+        this.carteItemRepository.save(carteItem);
     }
 
     @Override
@@ -37,6 +37,6 @@ public class CarteItemServiceImpl implements CarteItemService {
 
     @Override
     public CarteItem getCarteItemByName(String name) {
-        return null;
+        return this.carteItemRepository.findByName(name);
     }
 }

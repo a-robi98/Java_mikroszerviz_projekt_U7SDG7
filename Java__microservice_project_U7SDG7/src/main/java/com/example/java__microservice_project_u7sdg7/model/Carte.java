@@ -16,14 +16,13 @@ import javax.persistence.Id;
 public class Carte {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idCarte;
     private String carteName;
     private String type;
     private String description;
 
     @Builder
     public Carte(String carteName, String type, String description) {
-        this.id = id;
         this.carteName = carteName;
         this.type = type;
         this.description = description;

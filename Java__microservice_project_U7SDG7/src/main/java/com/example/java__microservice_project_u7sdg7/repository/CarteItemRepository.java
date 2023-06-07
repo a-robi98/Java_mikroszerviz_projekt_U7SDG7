@@ -12,5 +12,6 @@ import java.util.Optional;
 
 public interface CarteItemRepository extends JpaRepository<CarteItem,Long> {
 
+    CarteItem findByName(String name);
 
 }

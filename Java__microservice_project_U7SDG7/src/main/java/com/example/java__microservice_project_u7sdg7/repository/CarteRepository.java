@@ -10,7 +10,5 @@ import java.util.List;
 
 //@Repository
 public interface CarteRepository extends JpaRepository<Carte, Long> {
-  /*  List<CarteItem> listAllCarte();
-    CarteItem getCarteById(Long id);
-    void insertCarte(CarteItem carteItem);*/
+    Carte findByCarteName(String name);
 }

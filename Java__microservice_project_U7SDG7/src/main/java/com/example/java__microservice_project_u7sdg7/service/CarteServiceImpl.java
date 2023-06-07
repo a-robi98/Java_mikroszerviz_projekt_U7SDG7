@@ -31,11 +31,11 @@ public class CarteServiceImpl implements CarteService {
 
     @Override
     public Carte getCarteById(Long id) {
-        return this.carteRepository.findById(id);
+        return this.carteRepository.findById(id).get();
     }
 
     @Override
-    public Carte getCarteByName(String name) {
-        return null;
+    public Carte getCarteByCarteName(String name) {
+        return this.carteRepository.findByCarteName(name);
     }
 }
