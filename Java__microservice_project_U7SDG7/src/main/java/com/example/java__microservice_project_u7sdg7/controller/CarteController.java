@@ -5,10 +5,7 @@ import com.example.java__microservice_project_u7sdg7.service.CarteService;
 import com.example.java__microservice_project_u7sdg7.service.CarteServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,7 +34,7 @@ public class CarteController {
     }
 
     @PostMapping("/carte/addcarte")
-    public ResponseEntity<Carte> addCarte(@RequestParam Carte carte) {
+    public ResponseEntity<Carte> addCarte(@RequestBody Carte carte) {
         this.carteServiceImpl.addCarte(carte);
         return new ResponseEntity<>(carte,HttpStatus.CREATED);
     }

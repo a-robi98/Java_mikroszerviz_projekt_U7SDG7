@@ -15,15 +15,15 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class CarteItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private int carteId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idCarteItem;
+    private Long carteId;
     private String name;
     private String type;
     private int price;
 
     @Builder
-    public CarteItem( String name, String type, int price)
+    public CarteItem(Long carteId, String name, String type, int price)
     {
         this.carteId = carteId;
         this.name = name;

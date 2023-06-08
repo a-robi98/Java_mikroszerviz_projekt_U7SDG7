@@ -31,7 +31,7 @@ public class CarteItemServiceImpl implements CarteItemService {
     @Override
     public CarteItem getCarteItemById(Long id) {
         CarteItem carteItem = new CarteItem();
-        carteItem.setId(id);
+        carteItem.setIdCarteItem(id);
         return this.carteItemRepository.findById(id).get();
     }
 
