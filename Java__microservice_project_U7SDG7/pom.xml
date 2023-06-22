@@ -6,11 +6,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.12</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <!-- <relativePath/> lookup parent from repository -->
     </parent>
+
     <groupId>com.example</groupId>
     <artifactId>Java__microservice_project_U7SDG7</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>Java__microservice_project_U7SDG7</name>
     <description>Java__microservice_project_U7SDG7</description>
     <properties>
@@ -71,5 +73,10 @@
             </plugin>
         </plugins>
     </build>
+
+    <modules>
+        <module>CarteService</module>
+        <module>CrunchService</module>
+    </modules>
 
 </project>
